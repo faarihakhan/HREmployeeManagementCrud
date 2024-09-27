@@ -1,0 +1,48 @@
+﻿@using Model.ViewModel
+@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Update Employee";
+}
+
+@using (Html.BeginForm("CreateEmployee", "Employee", FormMethod.Post))
+{
+    <div class="container">
+        <h2 style="text-align:center">Update Employee</h2>
+
+        <div class="row">
+            @Html.HiddenFor(x => x.ID, new { id = "Id" })
+
+            <div class="col-md-12">
+                <label>First Name</label>
+                @Html.TextBoxFor(m => m.First_Name, new { @class = "form-control", id = "First_Name" })
+            </div>
+
+            <div class="col-md-12">
+                <label>Last Name</label>
+                @Html.TextBoxFor(m => m.Last_Name, new { @class = "form-control", id = "Last_Name" })
+            </div>
+
+            <div class="col-md-12">
+                <label>Gender</label>
+                @Html.TextBoxFor(m => m.Gender, new { @class = "form-control", id = "Gender" })
+            </div>
+
+            <div class="col-md-12">
+                <label>Salary</label>
+                @Html.TextBoxFor(m => m.Salary, new { @class = "form-control", id = "Salary" })
+            </div>
+
+            <div class="col-md-12">
+                <label for="dob">Date of Birth</label>
+                @Html.TextBoxFor(m => m.DOB, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", id = "DOB" })
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-dark">Update</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+}

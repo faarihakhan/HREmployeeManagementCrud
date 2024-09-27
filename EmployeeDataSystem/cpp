@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare and initialize a 2D array with 2 rows and 3 columns
+    int array[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    // Outer loop for rows
+    for (int i = 0; i < 2; i++) {
+        // Inner loop for columns
+        for (int j = 0; j < 3; j++) {
+            cout << array[i][j] << " "; // Print the element at row i, column j
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}

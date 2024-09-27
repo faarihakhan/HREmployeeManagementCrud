@@ -1,0 +1,48 @@
+﻿@using Model.ViewModel
+@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Create Page";
+}
+
+<div class="container">
+    <h2 style="text-align:center">New Employee</h2>
+    @using (Html.BeginForm("createEmployee", "Employee", FormMethod.Post))
+    {
+        <div class="row">
+            @Html.HiddenFor(x => x.ID, new { id = "Id" })
+
+            <div class="col-md-12">
+                <label>First Name</label>
+                @Html.TextBoxFor(m => m.First_Name, new { @class = "form-control" })
+            </div>
+
+            <div class="col-md-12">
+                <label>Last Name</label>
+                @Html.TextBoxFor(m => m.Last_Name, new { @class = "form-control" })
+            </div>
+
+            <div class="col-md-12">
+                <label>Gender</label>
+                @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
+            </div>
+
+            <div class="col-md-12">
+                <label>Salary</label>
+                @Html.TextBoxFor(m => m.Salary, new { @class = "form-control" })
+            </div>
+
+            <div class="col-md-12">
+                <label for="dob">Date of Birth</label>
+                @Html.TextBoxFor(m => m.DOB, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-dark">Add</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    }
+</div>
+

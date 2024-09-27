@@ -1,0 +1,15 @@
+-- packages ---
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.AspNetCore.Mvc.NewtonsoftJson
+Microsoft.EntityFrameworkCore 
+Microsoft.EntityFrameworkCore.Abstractions
+Microsoft.EntityFrameworkCore.Analyzers
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.Relational
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+--- scaffold command use in Repository -------------------
+
+Scaffold-DbContext "server=BD-KHI-LAP010;Database=Employee; Integrated Security=True;TrustServerCertificate=True;Trusted_Connection=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity -f -UseDatabaseNames
