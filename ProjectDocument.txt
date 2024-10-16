@@ -12,4 +12,4 @@ Microsoft.EntityFrameworkCore.Tools
 
 --- scaffold command use in Repository -------------------
 
-Scaffold-DbContext "server=BD-KHI-LAP010;Database=Employee; Integrated Security=True;TrustServerCertificate=True;Trusted_Connection=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity -f -UseDatabaseNames
+Scaffold-DbContext "server=BD-KHI-LAP010;Database=EcommerceDB; Integrated Security=True;TrustServerCertificate=True;Trusted_Connection=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity -f -UseDatabaseNames
